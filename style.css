@@ -1,0 +1,505 @@
+/* ===== Ranglar: logotipdagi qora fon va tilla rangdan olingan ===== */
+:root {
+  color-scheme: dark;
+  --bg: #14110d;
+  --panel: #1d1913;
+  --text: #ece3d2;
+  --muted: #a39682;
+  --line: #2f2920;
+  --gold: #c9a14a;
+  --gold-soft: #e0bf7a;
+  --radius: 6px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: "Manrope", Arial, sans-serif;
+  font-size: 1.05rem;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+h1, h2, h3, .logo, .motto {
+  font-family: "Cinzel", Georgia, serif;
+  line-height: 1.15;
+}
+
+a {
+  color: inherit;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
+/* ===== Header ===== */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  padding: 16px 8%;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  color: var(--gold-soft);
+}
+
+nav a {
+  margin-left: 22px;
+  text-decoration: none;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: var(--gold-soft);
+}
+
+/* ===== Hero ===== */
+.hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 78vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  padding: 64px 8%;
+}
+
+.hero-text {
+  position: relative;
+  max-width: 640px;
+}
+
+.hero h1 {
+  font-size: clamp(2.6rem, 7vw, 6rem);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--gold-soft);
+}
+
+.lead {
+  margin: 22px 0 32px;
+  font-size: 1.25rem;
+  max-width: 34ch;
+}
+
+.hero-art {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+/* Logotipdagi aylanaga o'xshash yupqa tilla halqa */
+.hero-art::before {
+  content: "";
+  position: absolute;
+  right: -12%;
+  bottom: 2%;
+  width: 88%;
+  aspect-ratio: 1;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  opacity: 0.55;
+}
+
+.hero-art .slider-block {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+}
+
+.hero-art .slider {
+  margin-top: 0;
+}
+
+/* ===== Tugma ===== */
+.btn {
+  display: inline-block;
+  padding: 13px 28px;
+  background: var(--gold);
+  color: var(--bg);
+  text-decoration: none;
+  border: 2px solid var(--gold);
+  border-radius: var(--radius);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: transparent;
+  color: var(--gold-soft);
+}
+
+/* ===== Bo'limlar ===== */
+.block {
+  padding: 88px 8%;
+  border-top: 1px solid var(--line);
+}
+
+.block h2 {
+  font-size: clamp(1.9rem, 5vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-bottom: 24px;
+}
+
+.block h2::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 2px;
+  margin-top: 14px;
+  background: var(--gold);
+}
+
+.sub {
+  font-size: 1.3rem;
+  margin: 40px 0 12px;
+  color: var(--gold-soft);
+}
+
+.wide {
+  max-width: 62ch;
+}
+
+.motto {
+  margin-top: 28px;
+  padding-left: 18px;
+  max-width: 34ch;
+  border-left: 3px solid var(--gold);
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--gold-soft);
+}
+
+.facts {
+  list-style: none;
+  margin-top: 28px;
+  max-width: 62ch;
+  border-top: 1px solid var(--line);
+}
+
+.facts li {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.facts span {
+  color: var(--gold-soft);
+  font-weight: 700;
+}
+
+.works {
+  list-style: none;
+  max-width: 62ch;
+}
+
+.works h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--gold-soft);
+}
+
+.note {
+  margin-top: 12px;
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* ===== Prompt bo'limi ===== */
+.dark {
+  background: var(--panel);
+}
+
+.dark .wide {
+  color: var(--muted);
+}
+
+pre {
+  margin: 28px 0;
+  padding: 24px;
+  max-width: 72ch;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.status {
+  margin-top: 12px;
+  min-height: 1.5em;
+  color: var(--gold-soft);
+}
+
+/* ===== Aloqa ===== */
+.contact {
+  list-style: none;
+  margin-top: 16px;
+}
+
+.contact li {
+  padding: 6px 0;
+}
+
+.contact a {
+  font-weight: 700;
+  color: var(--gold-soft);
+}
+
+footer {
+  padding: 24px 8%;
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+}
+
+/* ===== Rasm slayderi (barcha rasmlar bir xil rang berilgan) ===== */
+.slider {
+  position: relative;
+  max-width: 560px;
+  aspect-ratio: 4 / 3;
+  margin-top: 32px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+}
+
+.slider.square {
+  aspect-ratio: 1 / 1;
+  max-width: 440px;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.6s;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 60%;
+  /* Turli rasmlarni bir xil iliq ohangga keltiradi */
+  filter: sepia(0.3) saturate(0.85) contrast(1.05) brightness(0.95);
+}
+
+.slide figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 14px 18px;
+  background: rgba(20, 17, 13, 0.82);
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  background: rgba(20, 17, 13, 0.8);
+  color: var(--gold-soft);
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.slider-btn:hover {
+  background: var(--gold);
+  color: var(--bg);
+}
+
+.slider-btn.prev {
+  left: 12px;
+}
+
+.slider-btn.next {
+  right: 12px;
+}
+
+.dots {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: var(--gold);
+}
+
+/* ===== Mobil ===== */
+@media (max-width: 800px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .hero-art {
+    max-width: 360px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  nav a {
+    margin: 0 16px 0 0;
+  }
+  .block {
+    padding: 64px 8%;
+  }
+  .facts li {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .slide {
+    transition: none;
+  }
+}
+
+/* ===== Ko'p sahifali sayt uchun qo'shimchalar ===== */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+main > .block:first-child {
+  border-top: none;
+}
+
+nav a[aria-current="page"] {
+  color: var(--gold-soft);
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 4px;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.photo {
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  filter: sepia(0.3) saturate(0.85) contrast(1.05) brightness(0.95);
+}
+
+.links {
+  list-style: none;
+  margin-top: 28px;
+  max-width: 62ch;
+  border-top: 1px solid var(--line);
+}
+
+.links a {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+  text-decoration: none;
+}
+
+.links strong {
+  font-family: "Cinzel", Georgia, serif;
+  color: var(--gold-soft);
+}
+
+.links span {
+  color: var(--muted);
+  text-align: right;
+}
+
+.links a:hover strong {
+  text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+  .split {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .links a {
+    flex-direction: column;
+    gap: 2px;
+  }
+  .links span {
+    text-align: left;
+  }
+}

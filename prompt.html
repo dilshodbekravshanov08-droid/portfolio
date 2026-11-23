@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#14110d">
+  <title>Prompt namunasi | Dilshod</title>
+  <meta name="description" content="Dilshodning taqdimot yaratish uchun yozgan promptiga namuna.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <a href="index.html" class="logo">Dilshod</a>
+    <nav>
+      <a href="about.html">Men haqimda</a>
+      <a href="works.html">Ishlarim</a>
+      <a href="university.html">Universitet</a>
+      <a href="prompt.html" aria-current="page">Prompt namunasi</a>
+      <a href="contact.html">Aloqa</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="block">
+      <h2>Prompt namunasi</h2>
+      <p class="wide">Taqdimot yaratish uchun yozgan promptim shunday ko'rinadi. Kvadrat qavs ichidagi joylarni o'zgartirib, istalgan mavzuga moslash mumkin.</p>
+
+      <pre id="prompt-text">Sen tajribali taqdimot muallifisan.
+
+Vazifa: [MAVZU] bo'yicha 8 ta slayddan iborat taqdimot tayyorla.
+Auditoriya: [KIMLAR TOMOSHA QILADI].
+Maqsad: [TAQDIMOTDAN KEYIN NIMA BO'LISHI KERAK].
+
+Har bir slayd uchun yoz:
+1. Sarlavha (6 so'zdan oshmasin)
+2. 3 tagacha qisqa band
+3. Slaydga mos vizual g'oya (rasm, grafik yoki sxema)
+
+Tuzilish: birinchi slayd muammo, oxirgi slayd keyingi qadam.
+Til: oddiy o'zbek tili, qisqa gaplar, murakkab so'zlarsiz.
+Format: raqamlangan ro'yxat.
+
+Yozishni boshlashdan oldin menga 3 ta aniqlashtiruvchi savol ber.</pre>
+
+      <button id="copy-btn" class="btn" type="button">Promptni nusxalash</button>
+      <p id="copy-status" class="status" role="status"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Dilshod</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#14110d">
+  <title>Universitet | Dilshod</title>
+  <meta name="description" content="Dilshodning universitetdagi o'qish tartibi va rasmlari.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <a href="index.html" class="logo">Dilshod</a>
+    <nav>
+      <a href="about.html">Men haqimda</a>
+      <a href="works.html">Ishlarim</a>
+      <a href="university.html" aria-current="page">Universitet</a>
+      <a href="prompt.html">Prompt namunasi</a>
+      <a href="contact.html">Aloqa</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="block">
+      <h2>Universitetda o'qishim</h2>
+      <p class="wide">Bu yerga universitet nomini va qisqa tanishtiruvni yozasiz. Quyida o'qish tartibi va universitet rasmlari.</p>
+
+      <ul class="facts">
+        <li><strong>Universitetga kirish</strong><span>soat 9:00</span></li>
+        <li><strong>Bitta dars davomiyligi</strong><span>80 daqiqa</span></li>
+        <li><strong>O'qish muddati</strong><span>3 semestr</span></li>
+      </ul>
+      <p class="note">Birinchi dars 9:00 da boshlanib, 10:20 da tugaydi.</p>
+
+      <div class="slider-block" data-delay="5000">
+        <div class="slider" aria-roledescription="carousel" aria-label="Universitet rasmlari">
+          <figure class="slide active">
+            <img src="images/saidakbar.jpg" alt="Do'stlar bog'da maysazorda o'tirishibdi">
+            <figcaption>Do'stlar bilan, bog'da</figcaption>
+          </figure>
+          <figure class="slide">
+            <img src="images/parda.jpg" alt="Kompyuter oldida taqdimot ustida ishlash">
+            <figcaption>Kompyuter xonasida</figcaption>
+          </figure>
+          <button class="slider-btn prev" type="button" aria-label="Oldingi rasm">&#8249;</button>
+          <button class="slider-btn next" type="button" aria-label="Keyingi rasm">&#8250;</button>
+        </div>
+        <div class="dots"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Dilshod</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
